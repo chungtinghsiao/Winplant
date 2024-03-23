@@ -9,10 +9,33 @@
     loading
 </body>
 <script>
+    // Function to get the value of "state" parameter
+    function getDecodedState() {
+        // Use the URLSearchParams API with the current page's query string
+        const params = new URLSearchParams(window.location.search);
+        
+        // Get the encoded state parameter
+        const encodedState = params.get('state');
+        
+        // If "state" parameter exists and is not null
+        if (encodedState) {
+            // Decode the state parameter
+            const decodedState = decodeURIComponent(encodedState);
+            
+            // Return or do something with the decoded state
+            return decodedState;
+        } else {
+            // Return null or handle case where "state" parameter doesn't exist
+            return null;
+        }
+    }
+
     let isSignupedUser = false;
     const signupUrl = 'https://airtable.com/app7l9YqqKFPrJkM6/pag6mDNazR41z5TqB/form';
     // const urlParams = new URLSearchParams(window.location.search);
     // const action = urlParams.get('action');
+    const state = getDecodedState();
+    console.log(state);  // Outputs the decoded "state" parameter value
 
     // fetch data to check if is signup user
 
