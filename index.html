@@ -9,39 +9,57 @@
     loading
 </body>
 <script>
-    // Function to get the value of "state" parameter
+    const signupUrl = 'https://airtable.com/app7l9YqqKFPrJkM6/pag6mDNazR41z5TqB/form';
+    
     function getDecodedState() {
-        // Use the URLSearchParams API with the current page's query string
         const params = new URLSearchParams(window.location.search);
-        
-        // Get the encoded state parameter
         const encodedState = params.get('liff.state');
-        
-        // If "state" parameter exists and is not null
         if (encodedState) {
-            // Decode the state parameter
             const decodedState = decodeURIComponent(encodedState);
-            
-            // Return or do something with the decoded state
             return decodedState;
         } else {
-            // Return null or handle case where "state" parameter doesn't exist
             return null;
         }
     }
 
     let isSignupedUser = false;
-    const signupUrl = 'https://airtable.com/app7l9YqqKFPrJkM6/pag6mDNazR41z5TqB/form';
-    // const urlParams = new URLSearchParams(window.location.search);
-    // const action = urlParams.get('action');
+    // check if signup already?
+
     const state = getDecodedState();
-    console.log(state);  // Outputs the decoded "state" parameter value
 
-    // fetch data to check if is signup user
-
-    if (!isSignupedUser) {
-        // window.location = signupUrl;
-        // or load iframe
+    if (state === '/signup') {
+        if (!isSignupedUser) {
+            // go to miniextensions signup form
+            // redirect or embed
+        } else {
+            // ?
+        }
+    }
+    if (state === '/make-an-order') {
+        if (!isSignupedUser) {
+            // signup first
+            // then wait
+        }
+        // go to miniextensions order form
+        // redirect or embed
+    }
+    if (state === '/track-orders') {
+        if (!isSignupedUser) {
+            // signup first
+            // then wait
+        }
+        // go to miniextensions portal
+        // filter with not completed orders
+        // redirect or embed
+    }
+    if (state === '/view-history-orders') {
+        if (!isSignupedUser) {
+            // signup first
+            // then wait
+        }
+        // go to miniextensions portal
+        // filter with completed orders
+        // redirect or embed
     }
 
 </script>
