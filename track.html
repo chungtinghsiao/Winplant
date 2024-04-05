@@ -11,8 +11,17 @@
     <span class="loader"></span>
 </body>
 <script>
+    let userId;
     liff.init({
-        liffId: '2004505537-Gq659eMR'
-    })
+        liffId: '2004505537-Gq659eMR',
+        withLoginOnExternalBrowser: true,
+    }).then(() => {
+        liff.getProfile().then(profile => {
+            window.location.href =
+                'https://web.miniextensions.com/xpNiD6sDd6lg96oHNq4N' +
+                '?login_LINE+User+ID=' + profile.userId +
+                '&filter_is_completed=false';
+        });
+    });
 </script>
 </html>
