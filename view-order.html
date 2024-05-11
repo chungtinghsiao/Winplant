@@ -12,14 +12,13 @@
 </body>
 <script>
     let userId;
-    const urlParams = new URLSearchParams(window.location.search);
-    const fieldID = urlParams.get('fieldID');
-    const recordId = urlParams.get('recordId');
-
     liff.init({
         liffId: '2004505537-Gq659eMR',
         withLoginOnExternalBrowser: true,
     }).then(() => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const fieldID = urlParams.get('fieldID');
+        const recordId = urlParams.get('recordId');
         liff.getProfile().then(profile => {
             window.location.href =
                 'https://web.miniextensions.com/xpNiD6sDd6lg96oHNq4N' +
