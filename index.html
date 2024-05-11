@@ -5,46 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>穩植牙體技術所</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #142935;
-        }
-        .button {
-            background-color: #334F61;
-            border: none;
-            border-radius: 10px; /* 圓角邊框 */
-            color: #FFF;
-            padding: 15px 30px;
-            margin: 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            line-height: 20px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .button:hover {
-            background-color: #253b47;
-        }
-        .button i {
-            margin-right: 8px;
-        }
-    </style>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 </head>
 <body>
-    <div>
-        <a href="https://chungtinghsiao.github.io/Winplant/order" class="button"><i class="fas fa-plus-circle"></i>建立訂單</a>
-        <a href="https://chungtinghsiao.github.io/Winplant/track" class="button"><i class="fas fa-shipping-fast"></i>追蹤訂單</a>
-        <a href="https://chungtinghsiao.github.io/Winplant/history" class="button"><i class="fas fa-history"></i>歷史訂單</a>
-    </div>
+    <span class="loader"></span>
 </body>
 <script>
     liff.init({
