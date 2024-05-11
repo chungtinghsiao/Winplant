@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>建立訂單｜穩植牙體技術所</title>
+    <title>穩植牙體技術所</title>
     <link rel="stylesheet" href="./style.css">
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 </head>
@@ -11,12 +11,16 @@
     <span class="loader"></span>
 </body>
 <script>
+    let userId;
     liff.init({
         liffId: '2004505537-Gq659eMR',
         withLoginOnExternalBrowser: true,
     }).then(() => {
         liff.getProfile().then(profile => {
-            window.location.href = 'https://web.miniextensions.com/w5Gy2F8TCOGQh34gBcte' + '?prefill_LINE%20User%20ID=' + profile.userId;;
+            window.location.href =
+                'https://web.miniextensions.com/xpNiD6sDd6lg96oHNq4N' +
+                '?login_LINE%20User%20ID=' + profile.userId +
+                '&fieldId=fldkwy3HlOG6uteTj&recordId=rec48xuN3rygMoxdd';
         });
     });
 </script>
